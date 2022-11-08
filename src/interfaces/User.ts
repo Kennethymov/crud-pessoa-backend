@@ -2,7 +2,7 @@ interface IUser {
   id: number
   name: string;
   email: string;
-  bithDate: string;
+  birthDate: string;
 }
 
 export default IUser;

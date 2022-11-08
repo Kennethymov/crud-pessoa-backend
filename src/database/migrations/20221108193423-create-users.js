@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      bithDate: {
+      birth_date: {
         type: Sequelize.DATEONLY,
         allowNull: false, 
       }

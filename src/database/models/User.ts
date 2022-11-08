@@ -5,7 +5,7 @@ class User extends Model {
   id!: number;
   name!: string;
   email!: string;
-  bithDate!: string;
+  birthDate!: string;
 }
 
 User.init({
@@ -23,11 +23,12 @@ User.init({
     type: STRING,
     allowNull: false,
   },
-  bithDate: {
+  birthDate: {
     type: DATEONLY,
     allowNull: false,
   },
 }, {
+  underscored: true,
   sequelize: db,
   modelName: 'users',
   timestamps: false

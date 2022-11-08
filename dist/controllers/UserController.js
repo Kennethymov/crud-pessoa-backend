@@ -19,9 +19,11 @@ class UserController {
             const users = yield this.userService.getAll();
             return res.status(200).json(users);
         });
-        this.getByEmail = (req, res) => __awaiter(this, void 0, void 0, function* () {
-            const { email } = req.body;
-            const user = yield this.userService.getByEmail(email);
+        this.getById = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            console.log('ooooi');
+            const { id } = req.params;
+            console.log(id);
+            const user = yield this.userService.getById(parseInt(id, 10));
             return res.status(200).json(user);
         });
         this.create = (req, res) => __awaiter(this, void 0, void 0, function* () {

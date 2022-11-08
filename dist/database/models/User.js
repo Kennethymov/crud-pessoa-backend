@@ -22,11 +22,12 @@ User.init({
         type: sequelize_1.STRING,
         allowNull: false,
     },
-    bithDate: {
+    birthDate: {
         type: sequelize_1.DATEONLY,
         allowNull: false,
     },
 }, {
+    underscored: true,
     sequelize: _1.default,
     modelName: 'users',
     timestamps: false

@@ -9,4 +9,5 @@ const userRoute = (0, express_1.Router)();
 const userController = new UserController_1.default();
 userRoute.get('/pessoas', userController.getAll);
 userRoute.post('/pessoa', userController.create);
+userRoute.post('/pessoa/:id', userController.getById);
 exports.default = userRoute;

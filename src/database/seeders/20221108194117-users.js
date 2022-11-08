@@ -6,7 +6,7 @@ module.exports = {
     {
       name: 'Kennethy Magno Oliveira Valerio',
       email: 'kennethymov@gmail.com',
-      bithDate: '1991/10/11',
+      birth_date: '1991/10/11',
     },
   ], { });
   },

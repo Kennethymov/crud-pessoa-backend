@@ -8,13 +8,13 @@ class UserService {
     return user;
   };
 
-  public getByEmail = async (email: string ): Promise<IUser | null> => {
-    const user = await Users.findOne({ where: { email } });
+  public getById = async (id: number ): Promise<IUser | null> => {
+    const user = await Users.findOne({ where: { id } });
     return user;
   };
   public create = async (user:IUser):Promise<IUser | null> => {
-    const {name, email, bithDate} = user;
-    const newUser = await Users.create({name, email, bithDate});
+    const {name, email, birthDate} = user;
+    const newUser = await Users.create({name, email, birthDate});
     return newUser;
   };
 }

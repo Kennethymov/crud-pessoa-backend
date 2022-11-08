@@ -13,9 +13,13 @@ class UserController {
     return res.status(200).json(users);
   }
 
-  public getByEmail = async (req: Request, res: Response) => {
-    const { email } = req.body;
-    const user = await this.userService.getByEmail(email);
+  public getById = async (req: Request, res: Response) => {
+    console.log('ooooi');
+    
+    const { id } = req.params;
+    console.log(id);
+    
+    const user = await this.userService.getById(parseInt(id, 10));
     return res.status(200).json(user);
   };
 

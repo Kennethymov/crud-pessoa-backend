@@ -19,13 +19,13 @@ class UserService {
             const user = yield User_1.default.findAll();
             return user;
         });
-        this.getByEmail = (email) => __awaiter(this, void 0, void 0, function* () {
-            const user = yield User_1.default.findOne({ where: { email } });
+        this.getById = (id) => __awaiter(this, void 0, void 0, function* () {
+            const user = yield User_1.default.findOne({ where: { id } });
             return user;
         });
         this.create = (user) => __awaiter(this, void 0, void 0, function* () {
-            const { name, email, bithDate } = user;
-            const newUser = yield User_1.default.create({ name, email, bithDate });
+            const { name, email, birthDate } = user;
+            const newUser = yield User_1.default.create({ name, email, birthDate });
             return newUser;
         });
     }
