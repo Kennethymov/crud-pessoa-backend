@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import IUser, { IUserUpdate } from '../interfaces/User';
 import UserService from '../services/UserService';
 
 class UserController {
@@ -14,19 +15,22 @@ class UserController {
   }
 
   public getById = async (req: Request, res: Response) => {
-    console.log('ooooi');
-    
-    const { id } = req.params;
-    console.log(id);
-    
+    const { id } = req.params;  
     const user = await this.userService.getById(parseInt(id, 10));
     return res.status(200).json(user);
   };
 
   public create = async (req: Request, res: Response) => {
-    const user = req.body;
+    const user:IUser = req.body;
     const newUser = await this.userService.create(user);
     return res.status(201).json(newUser);
+  };
+
+  public update = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const dataUser:IUserUpdate = req.body;
+    const updatedUser = await this.userService.update(parseInt(id, 10), dataUser);
+    return res.status(200).json(updatedUser);
   };
 }
 

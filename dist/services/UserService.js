@@ -28,6 +28,12 @@ class UserService {
             const newUser = yield User_1.default.create({ name, email, birthDate });
             return newUser;
         });
+        this.update = (id, dataUser) => __awaiter(this, void 0, void 0, function* () {
+            const { name, email, birthDate } = dataUser;
+            yield User_1.default.update({ name, email, birthDate }, { where: { id } });
+            const user = yield this.getById(id);
+            return user;
+        });
     }
 }
 exports.default = UserService;

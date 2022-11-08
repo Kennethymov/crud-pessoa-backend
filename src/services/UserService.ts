@@ -1,4 +1,4 @@
-import IUser from '../interfaces/User';
+import IUser, { IUserUpdate } from '../interfaces/User';
 import Users from '../database/models/User';
 
 class UserService {
@@ -12,10 +12,18 @@ class UserService {
     const user = await Users.findOne({ where: { id } });
     return user;
   };
+
   public create = async (user:IUser):Promise<IUser | null> => {
     const {name, email, birthDate} = user;
     const newUser = await Users.create({name, email, birthDate});
     return newUser;
+  };
+
+  public update = async (id: number, dataUser:IUserUpdate):Promise<IUser | null> => {
+    const {name, email, birthDate} = dataUser;
+    await Users.update({ name, email, birthDate }, { where: { id } });
+    const user = await this.getById(id);
+    return user;
   };
 }
 

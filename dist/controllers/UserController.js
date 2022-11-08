@@ -20,9 +20,7 @@ class UserController {
             return res.status(200).json(users);
         });
         this.getById = (req, res) => __awaiter(this, void 0, void 0, function* () {
-            console.log('ooooi');
             const { id } = req.params;
-            console.log(id);
             const user = yield this.userService.getById(parseInt(id, 10));
             return res.status(200).json(user);
         });
@@ -30,6 +28,12 @@ class UserController {
             const user = req.body;
             const newUser = yield this.userService.create(user);
             return res.status(201).json(newUser);
+        });
+        this.update = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            const dataUser = req.body;
+            const updatedUser = yield this.userService.update(parseInt(id, 10), dataUser);
+            return res.status(200).json(updatedUser);
         });
         this.userService = new UserService_1.default();
     }
