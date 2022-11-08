@@ -24,6 +24,11 @@ class UserController {
             const user = yield this.userService.getByEmail(email);
             return res.status(200).json(user);
         });
+        this.create = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const user = req.body;
+            const newUser = yield this.userService.create(user);
+            return res.status(201).json(newUser);
+        });
         this.userService = new UserService_1.default();
     }
 }

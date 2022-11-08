@@ -17,12 +17,16 @@ class UserService {
     constructor() {
         this.getAll = () => __awaiter(this, void 0, void 0, function* () {
             const user = yield User_1.default.findAll();
-            console.log('aqui');
             return user;
         });
         this.getByEmail = (email) => __awaiter(this, void 0, void 0, function* () {
             const user = yield User_1.default.findOne({ where: { email } });
             return user;
+        });
+        this.create = (user) => __awaiter(this, void 0, void 0, function* () {
+            const { name, email, bithDate } = user;
+            const newUser = yield User_1.default.create({ name, email, bithDate });
+            return newUser;
         });
     }
 }

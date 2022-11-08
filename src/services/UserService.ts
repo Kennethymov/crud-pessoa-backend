@@ -12,6 +12,11 @@ class UserService {
     const user = await Users.findOne({ where: { email } });
     return user;
   };
+  public create = async (user:IUser):Promise<IUser | null> => {
+    const {name, email, bithDate} = user;
+    const newUser = await Users.create({name, email, bithDate});
+    return newUser;
+  };
 }
 
 export default UserService;
