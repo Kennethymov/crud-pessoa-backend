@@ -20,7 +20,7 @@ module.exports = {
         allowNull: false,
       },
       bithDate: {
-        type: Sequelize.STRING,
+        type: Sequelize.DATEONLY,
         allowNull: false, 
       }
     },
