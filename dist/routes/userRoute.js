@@ -11,4 +11,5 @@ userRoute.get('/pessoas', userController.getAll);
 userRoute.get('/pessoa/:id', userController.getById);
 userRoute.post('/pessoa', userController.create);
 userRoute.put('/pessoa/:id', userController.update);
+userRoute.delete('/pessoa/:id', userController.remove);
 exports.default = userRoute;

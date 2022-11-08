@@ -25,6 +25,10 @@ class UserService {
     const user = await this.getById(id);
     return user;
   };
+
+  public remove = async (id: number):Promise<void> => {
+    await Users.destroy({ where: { id } });
+  };
 }
 
 export default UserService;

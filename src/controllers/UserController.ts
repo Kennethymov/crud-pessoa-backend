@@ -32,6 +32,12 @@ class UserController {
     const updatedUser = await this.userService.update(parseInt(id, 10), dataUser);
     return res.status(200).json(updatedUser);
   };
+
+  public remove = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    await this.userService.remove(parseInt(id, 10));
+    return res.status(200).json({message: "usuário deletado com sucesso"});
+  };
 }
 
 export default UserController;

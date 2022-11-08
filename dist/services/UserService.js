@@ -34,6 +34,9 @@ class UserService {
             const user = yield this.getById(id);
             return user;
         });
+        this.remove = (id) => __awaiter(this, void 0, void 0, function* () {
+            yield User_1.default.destroy({ where: { id } });
+        });
     }
 }
 exports.default = UserService;

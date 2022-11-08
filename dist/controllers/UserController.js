@@ -35,6 +35,11 @@ class UserController {
             const updatedUser = yield this.userService.update(parseInt(id, 10), dataUser);
             return res.status(200).json(updatedUser);
         });
+        this.remove = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            yield this.userService.remove(parseInt(id, 10));
+            return res.status(200).json({ message: "usuário deletado com sucesso" });
+        });
         this.userService = new UserService_1.default();
     }
 }
