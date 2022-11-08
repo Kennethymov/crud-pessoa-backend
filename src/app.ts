@@ -8,11 +8,11 @@ const app = express();
 
 app.use(express.json());
 
+app.use('/pessoas', userRoute)
+
 app.get('/', (req: Request, res: Response) => {
   res.status(StatusCodes.OK).send('TESTE SIMBIOSE')
 });
-
-app.use('/pessoas', userRoute)
 
 app.use(erroMiddleware);
 

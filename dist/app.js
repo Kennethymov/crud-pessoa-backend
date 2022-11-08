@@ -7,8 +7,10 @@ const express_1 = __importDefault(require("express"));
 require("express-async-errors");
 const http_status_codes_1 = require("http-status-codes");
 const erroMiddleware_1 = __importDefault(require("./middlewares/erroMiddleware"));
+const userRoute_1 = __importDefault(require("./routes/userRoute"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.use('/pessoas', userRoute_1.default);
 app.get('/', (req, res) => {
     res.status(http_status_codes_1.StatusCodes.OK).send('TESTE SIMBIOSE');
 });
