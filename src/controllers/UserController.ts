@@ -15,7 +15,7 @@ class UserController {
   }
 
   public getById = async (req: Request, res: Response) => {
-    const { id } = req.params;  
+    const { id } = req.params;
     const user = await this.userService.getById(parseInt(id, 10));
     return res.status(200).json(user);
   };

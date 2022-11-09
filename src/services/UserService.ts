@@ -14,13 +14,13 @@ class UserService {
   };
 
   public create = async (user:IUser):Promise<IUser | null> => {
-    const {name, email, birthDate} = user;
-    const newUser = await Users.create({name, email, birthDate});
+    const { name, email, birthDate } = user;
+    const newUser = await Users.create({ name, email, birthDate });
     return newUser;
   };
 
   public update = async (id: number, dataUser:IUserUpdate):Promise<IUser | null> => {
-    const {name, email, birthDate} = dataUser;
+    const { name, email, birthDate } = dataUser;
     await Users.update({ name, email, birthDate }, { where: { id } });
     const user = await this.getById(id);
     return user;
