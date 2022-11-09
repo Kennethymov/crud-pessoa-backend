@@ -18,21 +18,6 @@ docker-compose down // para parar completamente a aplicação
 
 ### Endpoints
 
-#### Login
-
-| Método | Funcionalidade | URL |
-|---|---|---|
-| `POST` | Realiza login do usuário e retorna o token | http://localhost:3000/login |
-
-Nessa requisição é necessário informar o seguinte JSON:
-
-```
-{
-  "email": "email-cadastrado-no-banco-de-dados@email.com",
-  "password": "123456"
-}
-```
-
 #### Usuário
 
 | Método | Funcionalidade | URL |
