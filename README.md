@@ -12,8 +12,9 @@ Consiste em um CRUD dos seguintes dados referentes a uma pessoa: nome, email, da
 - Para rodar o repositório localmente, realize o clone do projeto e utilize os comandos a seguir para inicializar o Docker, instalar as dependências e configurar o banco de dados:
 
 ```
-docker-compose up --build
-docker-compose down // para parar completamente a aplicação
+npm install // para instalar as dependências;
+docker-compose up --build // para inicialicar o docker, fazer o build e iniciar a aplicação;
+docker-compose down // para parar completamente a aplicação;
 ```
 
 ### Endpoints

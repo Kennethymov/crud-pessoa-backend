@@ -31,6 +31,8 @@ const dataUser = async (req: Request, res: Response, next: NextFunction) => {
     next();
   } catch (error) {
     next(error);
+
+    
   }
 }
 
