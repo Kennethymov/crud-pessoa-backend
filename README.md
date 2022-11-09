@@ -23,10 +23,10 @@ docker-compose down // para parar completamente a aplicação
 | Método | Funcionalidade | URL |
 |---|---|---|
 | `POST` | Cria um novo usuário e retorna o usuário cadastrado  | http://localhost:3001/pessoa |
-| `GET` | Retorna todas os usuários cadastrados | http://localhost:3001/pessoas |
 | `GET` | Retorna os dados de um usuário específico | http://localhost:3001/pessoa/:id |
 | `PUT` | Atualiza os dados de um usuário específico | http://localhost:3001/pessoa/:id |
 | `DELETE` | Deleta os dados do usuário através da informação do token | http://localhost:3001/pessoa/:id |
+| `GET` | Retorna todas os usuários cadastrados | http://localhost:3001/pessoas |
 
 
 Na requisição POST, é necessário informar todos os dados do usuário no formato a seguir:
