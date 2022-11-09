@@ -13,6 +13,6 @@ const userController = new UserController_1.default();
 userRoute.get('/pessoas', userController.getAll);
 userRoute.get('/pessoa/:id(\\d+)', userValidate_1.default, userController.getById);
 userRoute.post('/pessoa', dataUser_1.default, userController.create);
-userRoute.put('/pessoa/:id(\\d+)', userValidate_1.default, dataUserU_date_1.default, userController.update);
+userRoute.put('/pessoa/:id(\\d+)', dataUserU_date_1.default, userController.update);
 userRoute.delete('/pessoa/:id(\\d+)', userValidate_1.default, userController.remove);
 exports.default = userRoute;

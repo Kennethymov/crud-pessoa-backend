@@ -38,6 +38,12 @@ class UserController {
     await this.userService.remove(parseInt(id, 10));
     return res.status(200).json({message: "usuário deletado com sucesso"});
   };
+
+  public getByEmail = async (req: Request, res: Response) => {
+    const { email } = req.body;
+    const user = await this.userService.getByEmail(email);
+    return res.status(200).json(user);
+  };
 }
 
 export default UserController;

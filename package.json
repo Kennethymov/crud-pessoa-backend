@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && npm run dev",
+    "start": "npm run build && node ./dist/index.js",
     "dev": "tsnd ./src/index.ts",
     "build": "tsc",
     "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize db:migrate && npx sequelize db:seed:all"

@@ -40,6 +40,11 @@ class UserController {
             yield this.userService.remove(parseInt(id, 10));
             return res.status(200).json({ message: "usuário deletado com sucesso" });
         });
+        this.getByEmail = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            const { email } = req.body;
+            const user = yield this.userService.getByEmail(email);
+            return res.status(200).json(user);
+        });
         this.userService = new UserService_1.default();
     }
 }

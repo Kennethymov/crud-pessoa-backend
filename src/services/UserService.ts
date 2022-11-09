@@ -29,6 +29,11 @@ class UserService {
   public remove = async (id: number):Promise<void> => {
     await Users.destroy({ where: { id } });
   };
+
+  public getByEmail = async (email: string ): Promise<IUser | null> => {
+    const user = await Users.findOne({ where: { email } });
+    return user;
+  };
 }
 
 export default UserService;

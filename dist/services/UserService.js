@@ -37,6 +37,10 @@ class UserService {
         this.remove = (id) => __awaiter(this, void 0, void 0, function* () {
             yield User_1.default.destroy({ where: { id } });
         });
+        this.getByEmail = (email) => __awaiter(this, void 0, void 0, function* () {
+            const user = yield User_1.default.findOne({ where: { email } });
+            return user;
+        });
     }
 }
 exports.default = UserService;

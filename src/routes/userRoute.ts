@@ -10,7 +10,7 @@ const userController = new UserController();
 userRoute.get('/pessoas', userController.getAll);
 userRoute.get('/pessoa/:id(\\d+)', userValidate, userController.getById)
 userRoute.post('/pessoa', dataUser, userController.create)
-userRoute.put('/pessoa/:id(\\d+)', userValidate, dataUserUpdate, userController.update)
+userRoute.put('/pessoa/:id(\\d+)', dataUserUpdate, userController.update)
 userRoute.delete('/pessoa/:id(\\d+)', userValidate, userController.remove)
 
 
