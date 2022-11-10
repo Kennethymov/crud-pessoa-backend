@@ -3,10 +3,12 @@ import 'express-async-errors';
 import { StatusCodes } from 'http-status-codes';
 import erroMiddleware from './middlewares/erroMiddleware';
 import userRoute from './routes/userRoute';
+import cors from 'cors';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.use('/', userRoute)
 
