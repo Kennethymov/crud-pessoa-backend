@@ -17,6 +17,14 @@ docker-compose up --build // para inicialicar o docker, fazer o build e iniciar 
 docker-compose down // para parar completamente a aplicação;
 ```
 
+### Testes
+
+- Este projeto possui testes unitarios. Para roda-los utilize o comando:
+
+```
+npm test
+```
+
 ### Endpoints
 
 #### Usuário
