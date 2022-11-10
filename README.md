@@ -6,10 +6,11 @@ Consiste em um CRUD dos seguintes dados referentes a uma pessoa: nome, email, da
 * Utilizando as práticas do REST
 * Aplicada Arquitetura de Software, com as camadas de Modelo, de Serviço e de Controladores
 
+- OBS.: É necessário a instalação do Docker para rodar a aplicação. Caso queira rodar localmente, é preciso configurar o arquivo .env de acordo com as variaves de ambiente no .env.sample.
 
 ### Instruções
 
-- Para rodar o repositório localmente, realize o clone do projeto e utilize os comandos a seguir para inicializar o Docker, instalar as dependências e configurar o banco de dados:
+- Para rodar o repositório, realize o clone do projeto e utilize os comandos a seguir para inicializar o Docker, instalar as dependências e configurar o banco de dados:
 
 ```
 npm install // para instalar as dependências;
@@ -20,6 +21,14 @@ docker-compose down // para parar completamente a aplicação;
 ### Testes
 
 - Este projeto possui testes unitarios. Para roda-los utilize o comando:
+
+```
+npm test
+```
+
+### Variaveis de ambiente
+
+- Este projeto possui variaveis de ambiente. Para roda-los utilize o comando:
 
 ```
 npm test
