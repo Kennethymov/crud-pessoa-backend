@@ -5,7 +5,7 @@ const Joi = require('joi').extend(require('@joi/date'));
 
 const userSchema = Joi.object({
   name: Joi.string().min(8).required(),
-  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
+  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'br'] } }).required(),
   birthDate: Joi.date().format('YYYY-MM-DD').required()
 });
 
