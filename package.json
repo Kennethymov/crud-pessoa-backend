@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register ./src/tests/*$NAME*.{test,spec}.ts -t 10000 --exit",
+    "prestart": "npx sequelize-cli db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "start": "npm run build && node .",
     "dev": "npm run build && tsnd ./src/index.ts",
     "build": "tsc",

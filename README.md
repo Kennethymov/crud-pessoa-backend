@@ -26,14 +26,6 @@ docker-compose down // para parar completamente a aplicação;
 npm test
 ```
 
-### Variaveis de ambiente
-
-- Este projeto possui variaveis de ambiente. Para roda-los utilize o comando:
-
-```
-npm test
-```
-
 ### Endpoints
 
 #### Usuário
